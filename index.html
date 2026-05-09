@@ -114,29 +114,35 @@
       background: rgba(255,255,255,0.05);
     }
 
-    /* Infinite Marquee */
+    /* Seamless Infinite Marquee Fix */
     .marquee {
       width: 100%;
       overflow: hidden;
-      white-space: nowrap;
+      background: var(--card-bg);
       border-top: 1px solid var(--card-border);
       border-bottom: 1px solid var(--card-border);
       padding: 20px 0;
-      background: var(--card-bg);
+      display: flex; /* Aligns the two tracks perfectly side-by-side */
     }
-    .marquee-content {
-      display: inline-block;
-      animation: scroll 20s linear infinite;
+    .marquee-track {
+      display: flex;
+      flex-shrink: 0;
+      animation: seamlessScroll 20s linear infinite;
+    }
+    .marquee-item {
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
       font-size: 1.25rem;
       text-transform: uppercase;
       letter-spacing: 2px;
       color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      padding-right: 3rem; /* Controls the spacing between items uniformly */
     }
-    @keyframes scroll {
+    @keyframes seamlessScroll {
       0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+      100% { transform: translateX(-100%); } /* Shifts exactly one track's width */
     }
 
     /* Staggered Scroll Animations */
@@ -173,7 +179,7 @@
   <nav class="fixed w-full top-0 z-50 glass-nav transition-all">
     <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
       
-      <!-- New NETSites Logo -->
+      <!-- NETSites Logo -->
       <a href="#" class="flex items-center group">
         <span class="display-font text-2xl md:text-3xl transition-transform duration-300 group-hover:scale-105">
           <span class="logo-net">NET</span><span class="logo-sites italic">Sites</span>
@@ -221,20 +227,23 @@
     </div>
   </header>
 
-  <!-- Infinite Tech Marquee -->
+  <!-- Flawless Infinite Tech Marquee -->
   <div class="marquee mt-10">
-    <div class="marquee-content">
-      <span>⚡ Lightning Fast Speeds</span> <span class="text-[var(--accent)] mx-6">✦</span>
-      <span>📱 Mobile Optimized</span> <span class="text-[var(--accent)] mx-6">✦</span>
-      <span>🔍 SEO Dominant</span> <span class="text-[var(--accent)] mx-6">✦</span>
-      <span>🎨 Custom UI/UX Design</span> <span class="text-[var(--accent)] mx-6">✦</span>
-      <span>🛡️ Secure Hosting</span> <span class="text-[var(--accent)] mx-6">✦</span>
-      <!-- Repeated for infinite scroll -->
-      <span>⚡ Lightning Fast Speeds</span> <span class="text-[var(--accent)] mx-6">✦</span>
-      <span>📱 Mobile Optimized</span> <span class="text-[var(--accent)] mx-6">✦</span>
-      <span>🔍 SEO Dominant</span> <span class="text-[var(--accent)] mx-6">✦</span>
-      <span>🎨 Custom UI/UX Design</span> <span class="text-[var(--accent)] mx-6">✦</span>
-      <span>🛡️ Secure Hosting</span> <span class="text-[var(--accent)] mx-6">✦</span>
+    <!-- Track 1 -->
+    <div class="marquee-track">
+      <span class="marquee-item">⚡ Lightning Fast Speeds <span class="text-[var(--accent)] ml-12">✦</span></span>
+      <span class="marquee-item">📱 Mobile Optimized <span class="text-[var(--accent)] ml-12">✦</span></span>
+      <span class="marquee-item">🔍 SEO Dominant <span class="text-[var(--accent)] ml-12">✦</span></span>
+      <span class="marquee-item">🎨 Custom UI/UX Design <span class="text-[var(--accent)] ml-12">✦</span></span>
+      <span class="marquee-item">🛡️ Secure Hosting <span class="text-[var(--accent)] ml-12">✦</span></span>
+    </div>
+    <!-- Track 2 (Exact Duplicate for the seamless illusion) -->
+    <div class="marquee-track" aria-hidden="true">
+      <span class="marquee-item">⚡ Lightning Fast Speeds <span class="text-[var(--accent)] ml-12">✦</span></span>
+      <span class="marquee-item">📱 Mobile Optimized <span class="text-[var(--accent)] ml-12">✦</span></span>
+      <span class="marquee-item">🔍 SEO Dominant <span class="text-[var(--accent)] ml-12">✦</span></span>
+      <span class="marquee-item">🎨 Custom UI/UX Design <span class="text-[var(--accent)] ml-12">✦</span></span>
+      <span class="marquee-item">🛡️ Secure Hosting <span class="text-[var(--accent)] ml-12">✦</span></span>
     </div>
   </div>
 
