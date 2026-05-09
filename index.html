@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Studio | Premium Web Design</title>
   
-  <!-- This line adds your logo to the browser tab (Favicon) -->
-
+  <!-- Professional Emoji Favicon instead of the small image -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -16,8 +16,8 @@
   
   <style>
     :root {
-      /* CHANGE THIS HEX CODE to match the exact color of your logo! */
-      --accent: #D4FF00; /* Currently Electric Lime Green */
+      /* Agency Accent Color - Electric Lime Green */
+      --accent: #D4FF00; 
       
       --bg-dark: #050505;
       --card-bg: #111111;
@@ -160,10 +160,9 @@
   <nav class="fixed w-full top-0 z-50 glass-nav transition-all">
     <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
       
-      <!-- YOUR LOGO GOES HERE -->
+      <!-- Text-based Typographic Logo -->
       <a href="#" class="flex items-center gap-3">
-        <!-- It will look for "logo.png" in your folder -->
-        <img src="logo.png" alt="Company Logo" class="h-8" onerror="this.outerHTML='<span class=\'display-font text-2xl font-bold tracking-tighter\'>Studio<span class=\'glow-text\'>.</span></span>'">
+        <span class="display-font text-2xl font-bold tracking-tighter">Studio<span class="glow-text">.</span></span>
       </a>
 
       <div class="hidden md:flex gap-8 text-sm font-semibold tracking-wide text-[#888]">
@@ -224,7 +223,7 @@
     </div>
   </div>
 
-  <!-- The Problem Section (Connecting with the client's pain) -->
+  <!-- The Problem Section -->
   <section id="problem" class="py-32 px-6">
     <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
       <div class="reveal">
@@ -392,9 +391,9 @@
   <footer class="py-12 px-6 border-t border-[#111] bg-[#050505]">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
       
-      <!-- Logo in Footer -->
+      <!-- Text-based Typographic Logo in Footer -->
       <a href="#" class="flex items-center gap-2">
-        <img src="logo.png" alt="Company Logo" class="h-6" onerror="this.outerHTML='<span class=\'display-font text-xl font-bold\'>Studio<span class=\'glow-text\'>.</span></span>'">
+        <span class="display-font text-xl font-bold tracking-tighter">Studio<span class="glow-text">.</span></span>
       </a>
 
       <p class="text-[#555] text-sm">© 2026 Crafted with pure code. All rights reserved.</p>
