@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Studio | Premium Web Design</title>
+  <title>NETSites | Premium Web Design Agency</title>
   
-  <!-- Professional Emoji Favicon instead of the small image -->
+  <!-- Professional Emoji Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   
   <!-- High-End Tech Agency Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@300;500;700;900&display=swap" rel="stylesheet">
   
   <style>
     :root {
@@ -49,6 +49,19 @@
       background: rgba(5, 5, 5, 0.7);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--card-border);
+    }
+
+    /* NETSites Typographic Logo Styling */
+    .logo-net {
+      font-weight: 900;
+      color: #FFFFFF;
+      letter-spacing: -0.05em;
+    }
+    .logo-sites {
+      font-weight: 300;
+      color: var(--accent);
+      text-shadow: 0 0 20px rgba(212, 255, 0, 0.4);
+      letter-spacing: -0.02em;
     }
 
     /* Premium Agency Cards */
@@ -160,9 +173,11 @@
   <nav class="fixed w-full top-0 z-50 glass-nav transition-all">
     <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
       
-      <!-- Text-based Typographic Logo -->
-      <a href="#" class="flex items-center gap-3">
-        <span class="display-font text-2xl font-bold tracking-tighter">Studio<span class="glow-text">.</span></span>
+      <!-- New NETSites Logo -->
+      <a href="#" class="flex items-center group">
+        <span class="display-font text-2xl md:text-3xl transition-transform duration-300 group-hover:scale-105">
+          <span class="logo-net">NET</span><span class="logo-sites italic">Sites</span>
+        </span>
       </a>
 
       <div class="hidden md:flex gap-8 text-sm font-semibold tracking-wide text-[#888]">
@@ -236,7 +251,7 @@
       
       <!-- Comparison Table -->
       <div class="agency-card p-8 reveal delay-100">
-        <h3 class="text-2xl font-bold mb-8 text-white border-b border-[#222] pb-4">The Standard vs. Our Standard</h3>
+        <h3 class="text-2xl font-bold mb-8 text-white border-b border-[#222] pb-4">The Standard vs. NETSites</h3>
         
         <div class="space-y-6">
           <div class="flex justify-between items-center">
@@ -349,7 +364,7 @@
         <div class="space-y-6">
           <div>
             <p class="text-[var(--accent)] text-xs font-bold uppercase tracking-widest mb-1">Email Us Directly</p>
-            <p class="text-lg">hello@youragency.com</p>
+            <p class="text-lg">hello@netsites.agency</p>
           </div>
           <div>
             <p class="text-[var(--accent)] text-xs font-bold uppercase tracking-widest mb-1">Operating From</p>
@@ -391,12 +406,14 @@
   <footer class="py-12 px-6 border-t border-[#111] bg-[#050505]">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
       
-      <!-- Text-based Typographic Logo in Footer -->
-      <a href="#" class="flex items-center gap-2">
-        <span class="display-font text-xl font-bold tracking-tighter">Studio<span class="glow-text">.</span></span>
+      <!-- Logo in Footer -->
+      <a href="#" class="flex items-center group">
+        <span class="display-font text-xl md:text-2xl transition-transform duration-300 group-hover:scale-105">
+          <span class="logo-net">NET</span><span class="logo-sites italic">Sites</span>
+        </span>
       </a>
 
-      <p class="text-[#555] text-sm">© 2026 Crafted with pure code. All rights reserved.</p>
+      <p class="text-[#555] text-sm">© 2026 NETSites. Crafted with pure code. All rights reserved.</p>
       
       <div class="flex gap-4 text-sm text-[#888]">
         <a href="#" class="hover:text-[var(--accent)] transition-colors">Instagram</a>
